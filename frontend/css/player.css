@@ -1,0 +1,107 @@
+/* Плеер */
+.player {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+}
+.now-playing {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--accent);
+}
+.time-bar { display: flex; align-items: center; gap: 10px; }
+.time-bar span { font-size: 0.8em; min-width: 42px; text-align: center; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+#seek-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+#seek-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: -5px;
+  box-shadow: var(--accent-glow);
+}
+.volume-bar { display: flex; align-items: center; gap: 8px; }
+#mute-btn { background: none; border: none; cursor: pointer; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--accent); transition: 0.2s; }
+#mute-btn:hover { color: #fff; transform: scale(1.1); }
+#mute-btn svg { width: 24px; height: 24px; fill: currentColor; }
+#volume-slider { flex: 1; -webkit-appearance: none; appearance: none; height: 4px; background: #333; border-radius: 2px; outline: none; cursor: pointer; }
+#volume-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; background: var(--accent); border-radius: 50%; margin-top: -5px; box-shadow: var(--accent-glow); }
+.controls { display: flex; justify-content: center; gap: 12px; }
+.controls button {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.controls button svg { width: 22px; height: 22px; fill: currentColor; }
+.controls button:hover { background: var(--accent); color: #121212; box-shadow: var(--accent-glow); }
+
+.add-track { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+#file-picker-btn {
+  background: var(--accent);
+  color: #121212;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: box-shadow 0.2s;
+}
+#file-picker-btn:hover { box-shadow: var(--accent-glow); }
+.folder-icon { width: 20px; height: 20px; color: inherit; }
+.drag-hint { color: var(--text-secondary); font-size: 0.85em; }
+
+.playlist {
+  flex: 1;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 8px;
+  list-style: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 0;
+}
+.playlist li {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.15s;
+  user-select: none;
+}
+.playlist li:active { cursor: grabbing; }
+.playlist li.drag-over { outline: 2px dashed var(--accent); outline-offset: -2px; }
+.playlist li:hover { background: #2a2a2a; }
+.playlist li.active { background: var(--accent); color: #121212; font-weight: 600; }
+.drag-handle { display: flex; align-items: center; opacity: 0.5; flex-shrink: 0; }
+.drag-handle svg { width: 16px; height: 16px; fill: currentColor; }

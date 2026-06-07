@@ -1,0 +1,23 @@
+<div class="kwork-section">
+  <div class="kwork-login-form">
+    <input type="text" id="kwork-username" placeholder="Логин (email)" />
+    <input type="password" id="kwork-password" placeholder="Пароль" />
+    <button class="system-btn" id="kwork-save-creds">Сохранить</button>
+    <span id="kwork-creds-message" class="message"></span>
+  </div>
+
+  <div class="kwork-controls">
+    <div class="keywords-manager">
+      <input type="text" id="keyword-input" placeholder="Новое ключевое слово" />
+      <button class="system-btn" id="add-keyword-btn">Добавить</button>
+      <select id="keywords-select" multiple size="4"></select>
+      <button class="system-btn" id="remove-keyword-btn">Удалить выбранные</button>
+    </div>
+    <div class="update-actions">
+      <button class="system-btn" id="force-update-btn">Обновить сейчас</button>
+      <span id="kwork-status" class="message"></span>
+    </div>
+  </div>
+
+  <div id="kwork-orders" class="kwork-grid">Загрузка...</div>
+</div>

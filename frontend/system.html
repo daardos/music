@@ -1,0 +1,23 @@
+<h2>Управление системой</h2>
+
+<div class="system-section">
+  <h3>Тема оформления Windows</h3>
+  <div class="theme-buttons">
+    <button class="system-btn" data-action="set-theme" data-mode="dark">Тёмная тема</button>
+    <button class="system-btn" data-action="set-theme" data-mode="light">Светлая тема</button>
+    <button class="system-btn" data-action="set-theme" data-mode="teal">Бирюзовая тема</button>
+    <button class="system-btn reset-btn" data-action="reset-theme">Сбросить к стандартной</button>
+  </div>
+  <div id="theme-message" class="message"></div>
+</div>
+
+<div class="system-section">
+  <h3>Пресеты быстрого запуска</h3>
+  <div class="preset-controls">
+    <select id="preset-select">
+      <option value="">-- Выберите пресет --</option>
+    </select>
+    <button class="system-btn" id="run-preset-btn">Запустить</button>
+  </div>
+  <div id="preset-message" class="message"></div>
+</div>

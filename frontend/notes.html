@@ -1,0 +1,43 @@
+<div class="notes-layout">
+  <div class="notes-sidebar">
+    <div class="notes-tree-header">
+      <button id="add-folder-btn" class="notes-btn-icon" title="Создать папку">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+      </button>
+      <button id="collapse-all-btn" class="notes-btn-icon" title="Свернуть все">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 9l7 7 7-7"/>
+        </svg>
+      </button>
+    </div>
+    <ul id="notes-tree" class="notes-tree"></ul>
+  </div>
+  <div class="notes-editor-container">
+    <div class="notes-editor-toolbar">
+      <button data-command="bold" title="Жирный (Ctrl+B)"><b>B</b></button>
+      <button data-command="italic" title="Курсив (Ctrl+I)"><i>I</i></button>
+      <button data-command="insertUnorderedList" title="Список">•</button>
+      <button data-command="insertOrderedList" title="Нумерованный список">1.</button>
+      <button id="insert-image-btn" title="Вставить изображение">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+      </button>
+      <input type="file" id="image-file-input" accept="image/*" hidden>
+      <span class="toolbar-spacer"></span>
+      <button id="export-backup-btn" title="Скачать бэкап">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Бэкап
+      </button>
+    </div>
+    <div id="notes-editor" class="notes-editor" contenteditable="true" placeholder="Выберите или создайте заметку..."></div>
+  </div>
+</div>

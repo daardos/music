@@ -1,0 +1,55 @@
+:root {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --accent: #00bcd4;
+  --accent-glow: 0 0 10px #00bcd4;
+  --text: #e0e0e0;
+  --text-secondary: #888;
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Оверлей drag-and-drop */
+.drop-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 188, 212, 0.1);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.6em;
+  color: var(--accent);
+  z-index: 100;
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius);
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.drop-overlay.hidden { display: none; }
+.overlay-icon { width: 48px; height: 48px; color: var(--accent); }
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }

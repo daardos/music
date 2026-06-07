@@ -1,0 +1,40 @@
+<div class="player">
+  <div class="now-playing"><span id="track-title">Нет трека</span></div>
+  <div class="time-bar">
+    <span id="current-time">00:00</span>
+    <input type="range" id="seek-slider" min="0" max="100" value="0" step="0.1" />
+    <span id="duration-time">00:00</span>
+  </div>
+  <div class="volume-bar">
+    <button id="mute-btn" title="Выключить звук">
+      <svg id="icon-volume-high" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+        <path d="M16 7.5c2.2 2.2 2.2 5.8 0 8M19 4.5c3.6 3.6 3.6 9.5 0 13"/>
+      </svg>
+      <svg id="icon-volume-mute" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+        <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+        <path d="M15 9l4 4m0-4l-4 4"/>
+      </svg>
+    </button>
+    <input type="range" id="volume-slider" min="0" max="100" value="80" step="1" />
+  </div>
+  <div class="controls">
+    <button id="prev-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 5v14l-11-7z"/><path d="M4 5h2v14H4z"/></svg></button>
+    <button id="play-pause-btn">
+      <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <button id="next-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 5v14l11-7z"/><path d="M20 5h-2v14h2z"/></svg></button>
+  </div>
+</div>
+<div class="add-track">
+  <button id="file-picker-btn">
+    <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M2 6C2 4.89543 2.89543 4 4 4H9L11 6H20C21.1046 6 22 6.89543 22 8V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6Z"/>
+    </svg>
+    Выбрать MP3
+  </button>
+  <input type="file" id="file-input" accept=".mp3" multiple hidden />
+  <span class="drag-hint">или перетащите</span>
+</div>
+<ul class="playlist" id="playlist"></ul>

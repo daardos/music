@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель</title>
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/tabs.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/kwork.css">
+<link rel="stylesheet" href="css/system.css">
+<link rel="stylesheet" href="css/notes.css">
+</head>
+<body>
+  <!-- Оверлей drag-and-drop -->
+  <div id="drop-overlay" class="drop-overlay hidden">
+    <svg class="overlay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 2L9 16M9 16L5 12M9 16L13 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 16V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V16" stroke="currentColor" stroke-linecap="round"/>
+    </svg>
+    <div>Перетащите MP3‑файлы в окно</div>
+  </div>
+
+  <!-- Вкладки -->
+  <div class="tabs-container">
+    <div class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="music">🎵 Музыка</button>
+      <button class="tab-btn" data-tab="kwork">💼 Биржа</button>
+      <button class="tab-btn" data-tab="system">⚙️ Система</button>
+      <button class="tab-btn" data-tab="notes">📝 Заметки</button>
+    </div>
+  </div>
+
+  <!-- Контейнеры для содержимого вкладок (будут наполняться динамически) -->
+  <div class="tab-content active" id="tab-music"></div>
+  <div class="tab-content" id="tab-kwork"></div>
+  <div class="tab-content" id="tab-system"></div>
+  <div class="tab-content" id="tab-notes"></div>
+
+<script src="js/core.js"></script>
+<script src="js/player.js"></script>
+<script src="js/kwork.js"></script>
+<script src="js/system.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

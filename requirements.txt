@@ -1,0 +1,5 @@
+flask
+pywebview
+keyboard
+requests
+beautifulsoup4

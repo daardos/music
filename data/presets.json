@@ -1,0 +1,19 @@
+{
+  "presets": [
+    {
+      "name": "Кодинг",
+      "commands": [
+        "C:\\Users\\DnsUSer\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+        "C:\\Program Files\\Yandex\\YandexBrowser\\Application\\browser.exe",
+        "cmd.exe"
+      ]
+    },
+    {
+      "name": "Отдых",
+      "commands": [
+        "https://www.youtube.com",
+        "notepad.exe"
+      ]
+    }
+  ]
+}

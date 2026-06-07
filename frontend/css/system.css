@@ -1,0 +1,60 @@
+/* Система */
+.system-section {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.system-section h3 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 1.1em;
+}
+
+.theme-buttons, .launch-buttons, .preset-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.system-btn {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  font-size: 0.9em;
+}
+.system-btn:hover {
+  background: var(--accent);
+  color: #121212;
+  box-shadow: var(--accent-glow);
+}
+.reset-btn {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.reset-btn:hover {
+  background: #e74c3c;
+  color: #fff;
+  box-shadow: 0 0 8px #e74c3c;
+}
+.message {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+#preset-select {
+  background: var(--surface);
+  border: 1px solid #444;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 4px;
+  outline: none;
+  min-width: 200px;
+}
+#preset-select:focus {
+  border-color: var(--accent);
+}
